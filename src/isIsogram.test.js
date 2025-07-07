@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 'use strict';
 
 describe('isIsogram', () => {
@@ -8,7 +7,7 @@ describe('isIsogram', () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
 
-  it('should return true for a word with no repeating letters (case-insensitive)', () => {
+  it('should return true for a word with no repeating letters', () => {
     expect(isIsogram('playgrounds')).toBe(true);
   });
 
@@ -16,7 +15,7 @@ describe('isIsogram', () => {
     expect(isIsogram('look')).toBe(false);
   });
 
-  it('should return false for a word with repeating letters (case-insensitive)', () => {
+  it('should return false for a word with repeating letters', () => {
     expect(isIsogram('Adam')).toBe(false);
   });
 
@@ -24,7 +23,7 @@ describe('isIsogram', () => {
     expect(isIsogram('')).toBe(true);
   });
 
-  it('should return false for a word with repeating letters (case-insensitive)', () => {
+  it('should return false for a word with repeating letters', () => {
     expect(isIsogram('Oops')).toBe(false);
   });
 
@@ -32,7 +31,7 @@ describe('isIsogram', () => {
     expect(isIsogram('a')).toBe(true);
   });
 
-  it('should return false for a word with repeating case-insensitive letters', () => {
+  it('false for a word with repeating case-insensitive letters', () => {
     expect(isIsogram('aa')).toBe(false);
   });
 
@@ -41,11 +40,11 @@ describe('isIsogram', () => {
     expect(isIsogram('no no'.replace(/\s+/g, ''))).toBe(false);
   });
 
-  it('should return true for a word with mixed case letters, no repeats', () => {
+  it('true for a word with mixed case letters, no repeats', () => {
     expect(isIsogram('AbCdeF')).toBe(true);
   });
 
-  it('should return false for a word with mixed case letters and repeats', () => {
+  it('false for a word with mixed case letters and repeats', () => {
     expect(isIsogram('aAbC')).toBe(false);
   });
 });
